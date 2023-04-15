@@ -10,7 +10,7 @@ M.settings = {
 M.packages = {
   ["nvim-ufo"] = {
     "kevinhwang91/nvim-ufo",
-    requires = "kevinhwang91/promise-async",
+    dependencies = "kevinhwang91/promise-async",
   },
 }
 

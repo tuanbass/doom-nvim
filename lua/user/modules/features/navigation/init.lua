@@ -14,18 +14,25 @@ M.packages = {
 
   -- ["cutlass.nvim"] = {
   --   "tuanbass/cutlass.nvim", },
-  ["textobj1"] = {
-    "kana/vim-textobj-line",
-  },
-  ["textobj2"] = {
-    "kana/vim-textobj-entire",
-  },
+  -- TODO: textobj plugin no more work with Lazy package manager
+  -- ["textobj1"] = {
+  --   "kana/vim-textobj-line",
+  --   lazy = true,
+  --   keys = "<leader>.",
+  --
+  -- },
+
+  -- ["textobj2"] = {
+  --   "kana/vim-textobj-entire",
+  --   lazy = false,
+  -- },
   ["vim-expand-region"] = {
     "terryma/vim-expand-region",
   },
-  ["textobj3"] = {
-    "kana/vim-textobj-user",
-  },
+  -- ["textobj3"] = {
+  --   "kana/vim-textobj-user",
+  --   lazy = false,
+  -- },
   ["hop.nvim"] = {
     "phaazon/hop.nvim", -- jum to anywhere in screenvim-telescope/telescope.nvimc:Pn
   },

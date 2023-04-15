@@ -64,11 +64,15 @@ telescope.packages = {
   ["telescope-fzf-native.nvim"] = {
     "nvim-telescope/telescope-fzf-native.nvim",
     -- cmd = "Telescope ",
-    after = "telescope.nvim",
+    dependencies = "telescope.nvim",
     config = function()
       require("telescope").load_extension("fzf")
     end,
-    opt = false,
+    lazy = false,
+    -- build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    -- TODO: Currently, need to go to /.local/share/nvim/lazy/telescope-fzf-native.nvim and manual run make.
+    -- Need to find a way to run make automatically. Dont know why build command not work
+    build = 'make'
   },
   ["telescope-ui-select.nvim"] = {
     "nvim-telescope/telescope-ui-select.nvim",
