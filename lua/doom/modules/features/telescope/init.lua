@@ -2,13 +2,16 @@ local telescope = {}
 
 telescope.settings = {
   defaults = {
-    find_command = {
+    -- According to source code in https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/config.lua,
+    -- the key should be vimgrep_arguments, not find_command
+    vimgrep_arguments = {
       "rg",
       "--no-heading",
       "--with-filename",
       "--line-number",
       "--column",
       "--smart-case",
+      "--hidden",
     },
     initial_mode = "insert",
     selection_strategy = "reset",
@@ -72,7 +75,7 @@ telescope.packages = {
     -- build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
     -- TODO: Currently, need to go to /.local/share/nvim/lazy/telescope-fzf-native.nvim and manual run make.
     -- Need to find a way to run make automatically. Dont know why build command not work
-    build = 'make'
+    build = "make",
   },
   ["telescope-ui-select.nvim"] = {
     "nvim-telescope/telescope-ui-select.nvim",
@@ -88,7 +91,7 @@ telescope.packages = {
     commit = "304508fb7bea78e3c0eeddd88c4837501e403ae8",
     cmd = "Telescope browse_files",
     keys = "<leader>.",
-    dependencies = {"nvim-telescope/telescope.nvim"},
+    dependencies = { "nvim-telescope/telescope.nvim" },
     -- after = "telescope.nvim",
     lazy = true,
   },
