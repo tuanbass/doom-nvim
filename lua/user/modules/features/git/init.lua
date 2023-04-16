@@ -11,7 +11,7 @@ M.packages = {
   },
   ["diffview.nvim"] = {
     "sindrets/diffview.nvim",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
   },
   ["git-conflict.nvim"] = {
     "akinsho/git-conflict.nvim",

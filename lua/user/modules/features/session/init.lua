@@ -5,7 +5,7 @@ M.settings = {}
 M.packages = {
   ["telescope_sessions_picker"] = {
     "JoseConseco/telescope_sessions_picker.nvim",
-    after = "telescope.nvim",
+    dependencies = "telescope.nvim",
   },
   -- ["vimade"] = {
   --   "TaDaa/vimade",

@@ -5,7 +5,7 @@ M.settings = {}
 M.packages = {
   ["hydra.nvim"] = {
     "anuvyklack/hydra.nvim",
-    requires = "anuvyklack/keymap-layer.nvim",
+    dependencies = "anuvyklack/keymap-layer.nvim",
   },
   -- ["vimade"] = {
   --   "TaDaa/vimade",

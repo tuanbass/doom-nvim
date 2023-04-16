@@ -5,7 +5,7 @@ M.settings = {}
 M.packages = {
   ["attempt.nvim"] = {
     "m-demare/attempt.nvim",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
   },
   -- ["vimade"] = {
   --   "TaDaa/vimade",

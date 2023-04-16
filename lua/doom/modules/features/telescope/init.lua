@@ -80,11 +80,11 @@ telescope.packages = {
   ["telescope-ui-select.nvim"] = {
     "nvim-telescope/telescope-ui-select.nvim",
     -- cmd = "Telescope ",
-    after = "telescope.nvim",
+    dependencies = "telescope.nvim",
     config = function()
       require("telescope").load_extension("ui-select")
     end,
-    opt = false,
+    lazy = false,
   },
   ["telescope-file-browser.nvim"] = {
     "nvim-telescope/telescope-file-browser.nvim",

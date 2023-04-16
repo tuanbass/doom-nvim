@@ -166,7 +166,7 @@ lsp.packages = {
   ["cmp-cmdline"] = {
     "hrsh7th/cmp-cmdline",
     commit = "23c51b2a3c00f6abc4e922dbd7c3b9aca6992063",
-    after = "nvim-cmp",
+    dependencies = "nvim-cmp",
   },
 }
 

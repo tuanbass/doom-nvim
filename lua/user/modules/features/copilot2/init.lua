@@ -20,7 +20,7 @@ M.packages = {
   },
   ["copilot-cmp"] = {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
+    dependencies = { "copilot.lua" },
   },
   -- ["vimade"] = {
   --   "TaDaa/vimade",
