@@ -1,4 +1,5 @@
 {
+  "ChatGPT.nvim": { "branch": "main", "commit": "5a6287cdd90838c727cb8ac8dbd4787702445680" },
   "LuaSnip": { "branch": "master", "commit": "53e812a6f51c9d567c98215733100f0169bcc20a" },
   "SchemaStore.nvim": { "branch": "main", "commit": "571056608b7fc569f856c8174fcbffaad548eec5" },
   "attempt.nvim": { "branch": "main", "commit": "914d6ca08733e533a3d1197aa8f83eec9eeb20e8" },
@@ -37,6 +38,7 @@
   "neodev.nvim": { "branch": "main", "commit": "0e3f5e763639951f96f9acbdc9f52a9fedf91b46" },
   "neogen": { "branch": "main", "commit": "0958aeffcddf46e57785c3026be934816b4f39d2" },
   "neogit": { "branch": "master", "commit": "69a6ca7c41b023ebf9cad70778e227b3209b40c4" },
+  "nui.nvim": { "branch": "main", "commit": "698e75814cd7c56b0dd8af4936bcef2d13807f3c" },
   "null-ls.nvim": { "branch": "main", "commit": "915558963709ea17c5aa246ca1c9786bfee6ddb4" },
   "nvim-autopairs": { "branch": "master", "commit": "f00eb3b766c370cb34fdabc29c760338ba9e4c6c" },
   "nvim-cmp": { "branch": "main", "commit": "11a95792a5be0f5a40bab5fc5b670e5b1399a939" },

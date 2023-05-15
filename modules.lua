@@ -67,6 +67,7 @@ return {
     "github",
     -- "copilot",  -- Copilot using standard Copilot from github/tpope
     "copilot2",  -- Copilot using Copilot lua plugin from zbirenbaum
+    -- "chatgpt",
     "mini-util",
     "session",
     "hydra",
