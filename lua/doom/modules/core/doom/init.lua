@@ -24,7 +24,8 @@ required.binds = function()
   local binds = {
     { "ZZ", require("doom.core.functions").quit_doom, name = "Fast exit" },
     { "<ESC>", ":noh<CR>", name = "Remove search highlight" },
-    { "<Tab>", ":bnext<CR>", name = "Jump to next buffer" },
+    -- TODO: Disabled for now, it makes C-I (navigate in jump list) mess, as Tab and C-I are the same.
+    -- { "<Tab>", ":bnext<CR>", name = "Jump to next buffer" }, 
     { "<S-Tab>", ":bprevious<CR>", name = "Jump to prev buffer" },
     {
       "<C-",
