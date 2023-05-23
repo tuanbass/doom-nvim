@@ -10,7 +10,7 @@ M.packages = {
   -- ["vim-sandwich"] = {
   --   "machakann/vim-sandwich",
   -- },
-  ["symbols-outline.nvim"] = { "simrat39/symbols-outline.nvim" },
+  -- ["symbols-outline.nvim"] = { "simrat39/symbols-outline.nvim" },
 
   -- ["cutlass.nvim"] = {
   --   "tuanbass/cutlass.nvim", },
@@ -41,9 +41,15 @@ M.packages = {
   },
   ["delaytrain.nvim"] = { -- penalty when repeat j/k for navigation
     "ja-ford/delaytrain.nvim",
+    cond = function()
+      return vim.g.vscode ~= 1
+    end,
   },
   ["better-escape.nvim"] = { -- penalty when repeat j/k for navigation
     "max397574/better-escape.nvim",
+    cond = function()
+      return vim.g.vscode ~= 1
+    end,
   },
   -- ["telescope-fzf-native.nvim"] = { -- penalty when repeat j/k for navigation
   --   "nvim-telescope/telescope-fzf-native.nvim",

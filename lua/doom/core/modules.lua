@@ -8,7 +8,12 @@
 local profiler = require("doom.services.profiler")
 local utils = require("doom.utils")
 local filename = "modules.lua"
-
+if vim.g.vscode then
+  -- vim is run from VSCode extension
+  --  we need a smaller set of modules
+  print ("Running from VSCode")
+  filename = "modules.vscode.lua"
+end
 local modules = {}
 
 -- Path cases:

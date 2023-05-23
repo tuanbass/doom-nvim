@@ -5,6 +5,9 @@ M.settings = {}
 M.packages = {
   ["zen-mode.nvim"] = {
     "folke/zen-mode.nvim",
+    cond=function()
+      return vim.g.vscode ~= 1
+    end,
   },
   ["vimade"] = { -- fade unfocused buffer
     "TaDaa/vimade",
@@ -12,9 +15,9 @@ M.packages = {
   ["nvim-treesitter-context"] = { -- stick current context (class/function when scroll)
     "nvim-treesitter/nvim-treesitter-context",
   },
-  ["vim-scratchpad"] = { -- type "dsp in edit buffer" to edit misc
-    "konfekt/vim-scratchpad",
-  },
+  -- ["vim-scratchpad"] = { -- type "dsp in edit buffer" to edit misc
+  --   "konfekt/vim-scratchpad",
+  -- },
   ["quick-scope"] = { -- highlight char to go left/righ
     "unblevable/quick-scope",
   },
