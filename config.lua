@@ -49,20 +49,22 @@ end
 if doom.features.lsp ~= nil then
   doom.features.lsp.requires_modules = { "features.auto_install" }
   doom.features.lsp.settings.completion.sources = {
-      { name = "copilot" },
-      { name = "nvim_lua" },
-      { name = "nvim_lsp" },
-      { name = "luasnip" },
-      { name = "path" },
-      { name = "buffer" },
+    { name = "copilot" },
+    { name = "nvim_lua" },
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
+    { name = "path" },
+    { name = "buffer" },
   }
   -- doom.features.lsp.settings.completion.completeopt="menu,menuone,preview,noinsert,noselect" -- force user choose an item to complete
-  doom.features.lsp.settings.completion.completeopt="menu,menuone,preview,noinsert,noselect" -- force user choose an item to complete
+  doom.features.lsp.settings.completion.completeopt = "menu,menuone,preview,noinsert,noselect" -- force user choose an item to complete
 end
 
-
 -- not hide file with any prifix
-doom.features.explorer.settings.filters.custom={}
+if doom.features.explorer ~= nil then
+  doom.features.explorer.settings.filters.custom = {}
+end
+
 -- doom.features.
 -- -- vim: sw=2 sts=2 ts=2 expandtab
 -- --
@@ -134,6 +136,9 @@ doom.use_package({
   "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim",
   config = function()
     require("toggle_lsp_diagnostics").init()
+  end,
+  cond = function()
+    return vim.g.vscode ~= 1
   end,
 })
 --
@@ -216,16 +221,14 @@ local prohitbitedBuf = {
 
 function telescope_find_files_custom()
   local title = vim.fn.bufname("%")
-  if (#vim.api.nvim_list_wins() > 1 )then -- 2 windows or more open, we should no allow open telescope in Neotree, term...
-
-
-  for i, x in pairs(prohitbitedBuf) do
-    if title:find(x) == 1 then
-      -- this window title is prohibited
-      print("could not open find_files in this window")
-      return
+  if #vim.api.nvim_list_wins() > 1 then -- 2 windows or more open, we should no allow open telescope in Neotree, term...
+    for i, x in pairs(prohitbitedBuf) do
+      if title:find(x) == 1 then
+        -- this window title is prohibited
+        print("could not open find_files in this window")
+        return
+      end
     end
-  end
   end
 
   require("telescope.builtin").find_files()
@@ -233,6 +236,5 @@ end
 --
 doom.use_keybind({
   -- The `name` field will add the keybind to whichkey
-  { "<leader>ff", name = "find_file_adv", ':lua telescope_find_files_custom()<CR>',
-  } ,
+  { "<leader>ff", name = "find_file_adv", ":lua telescope_find_files_custom()<CR>" },
 })
