@@ -92,7 +92,7 @@ gitsigns.binds = {
         name = "Next Hunk",
       },
       {
-        "p",
+        "N",
         "<cmd>lua require'gitsigns'.prev_hunk()<CR>",
         name = "Prev Hunk",
       },
