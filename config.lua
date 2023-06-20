@@ -4,6 +4,7 @@
 -- Just override stuff in the `doom` global table (it's injected into scope
 -- automatically).
 
+
 -- ADDING A PACKAGE
 -- doom.use_package("EdenEast/nightfox.nvim", "sainnhe/sonokai") doom.use_package({
 --   "ur4ltz/surround.nvim",
@@ -40,7 +41,9 @@
 -- doom.indent = 2
 -- doom.core.treesitter.settings.show_compiler_warning_message = false
 doom.ignorecase = true
+doom.smartcase = true  -- especially for the mini.jump
 doom.core.reloader.settings.reload_on_save = false
+doom.auto_comment=false
 --
 if doom.langs.lua ~= nil then
   doom.langs.lua.settings.disable_lsp = true
@@ -238,3 +241,12 @@ doom.use_keybind({
   -- The `name` field will add the keybind to whichkey
   { "<leader>ff", name = "find_file_adv", ":lua telescope_find_files_custom()<CR>" },
 })
+
+
+-- avoid "o/O" auto insert comments
+--
+doom.use_cmd({
+  {"AutoCommentOff", function()  vim.opt.formatoptions:remove("o") end},
+  {"AutoCommentOn", function()  vim.opt.formatoptions:append("o") end},
+})
+

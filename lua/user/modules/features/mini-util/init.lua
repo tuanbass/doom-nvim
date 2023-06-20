@@ -31,7 +31,8 @@ M.configs = {
 
     -- use gcc to comment line
     require('mini.comment').setup()
-
+    -- use ] and [ to naviate
+    require('mini.bracketed').setup()
     -- correct buffer to display when delete a buffer
     -- Not use, sometime bugs when press j/k
     -- require('mini.bufremove').setup()
