@@ -106,6 +106,12 @@ M.cmds = {
 
 M.binds = {
   {
+    "<leader>cd",
+    { -- Adds a new `whichkey` folder called `+info`
+          { "T", "<cmd>Trouble document_diagnostics<cr>", name = "Troule this buf" },
+    },
+  },
+  {
     "<leader>v",
     name = "+views",
     { -- Adds a new `whichkey` folder called `+info`
