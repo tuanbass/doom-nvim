@@ -44,6 +44,8 @@ doom.ignorecase = true
 doom.smartcase = true  -- especially for the mini.jump
 doom.core.reloader.settings.reload_on_save = false
 doom.auto_comment=false
+-- vim.api.nvim_set_option("formatoptions", "jcrql") -- by default , we should not auto insert comment when press 'o' or O
+
 --
 if doom.langs.lua ~= nil then
   doom.langs.lua.settings.disable_lsp = true
@@ -144,6 +146,12 @@ doom.use_package({
     return vim.g.vscode ~= 1
   end,
 })
+
+-- disable auto insert comment when press 'o' or 'O'
+vim.cmd([[
+  autocmd FileType * set formatoptions-=o
+]])
+
 --
 --
 -- -- Packer
@@ -246,7 +254,8 @@ doom.use_keybind({
 -- avoid "o/O" auto insert comments
 --
 doom.use_cmd({
-  {"AutoCommentOff", function()  vim.opt.formatoptions:remove("o") end},
-  {"AutoCommentOn", function()  vim.opt.formatoptions:append("o") end},
+  {"CommentAutoOff", function()  vim.opt.formatoptions:remove("o") end},
+  {"CommentAutoOn", function()  vim.opt.formatoptions:append("o") end},
 })
 
+vim.opt.formatoptions:remove("o")
