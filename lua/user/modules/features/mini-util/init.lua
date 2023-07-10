@@ -37,6 +37,8 @@ M.configs = {
     -- Not use, sometime bugs when press j/k
     -- require('mini.bufremove').setup()
     -- Hight light current indent level
+    -- enhanced motion a/i
+    require('mini.ai').setup()
 
     require('mini.indentscope').setup(
       {draw = {
