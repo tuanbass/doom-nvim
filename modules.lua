@@ -71,7 +71,9 @@ return {
     "mini-util",
     "session",
     "hydra",
+    "edit",
     "nope",
+
 --     -- "charcounter", -- custom module test
   },
 
