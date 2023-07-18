@@ -33,20 +33,18 @@ M.autocmds = {}
 
 M.cmds = {}
 -- M.requires_modules = { "features.auto_install" }
-M.binds =
-{
+M.binds = {
   {
     "<leader>E",
     name = "Entertainment",
     mode = "nv",
     {
-      {'n' ,  ":Spotify next<cr>", "SpotNext" },
-      {'p' ,  ":Spotify prev<cr>", "SpotPrev" },
-      {'s' ,  ":Spotify play/pause<cr>", "SpotPlay/Stop" },
-      {'S' ,  ":Spotify show<cr>", "SpotShow" },
-      {'u' ,  ":Spotify status<cr>", "SpotStatus" },
-
-    }
+      { "n", ":Spotify next<cr>", "SpotNext" },
+      { "p", ":Spotify prev<cr>", "SpotPrev" },
+      { "s", ":Spotify play/pause<cr>", "SpotPlay/Stop" },
+      { "S", ":Spotify show<cr>", "SpotShow" },
+      { "u", ":Spotify status<cr>", "SpotStatus" },
+    },
   },
 }
 

@@ -5,7 +5,7 @@ M.settings = {}
 M.packages = {
   ["zen-mode.nvim"] = {
     "folke/zen-mode.nvim",
-    cond=function()
+    cond = function()
       return vim.g.vscode ~= 1
     end,
   },
@@ -21,7 +21,7 @@ M.packages = {
   ["quick-scope"] = { -- highlight char to go left/righ
     "unblevable/quick-scope",
   },
-  ["close-buffers.nvim"] = { -- highlight char to go left/righ
+  ["close-buffers.nvim"] = { --
     "kazhala/close-buffers.nvim",
   },
 }
@@ -108,7 +108,7 @@ M.binds = {
   {
     "<leader>cd",
     { -- Adds a new `whichkey` folder called `+info`
-          { "T", "<cmd>Trouble document_diagnostics<cr>", name = "Troule this buf" },
+      { "T", "<cmd>Trouble document_diagnostics<cr>", name = "Troule this buf" },
     },
   },
   {
@@ -119,13 +119,12 @@ M.binds = {
       { "s", "<cmd>SymbolsOutline<cr>", name = "SymbolsOutline" },
 
       {
-        't',
+        "t",
         {
           { "z", "<cmd>Trouble document_diagnostics<cr>", name = "Troule this buf" },
           { "a", "<cmd>Trouble workspace_diagnostics<cr>", name = "Troule all " },
         },
-          name = "+Trouble",
-
+        name = "+Trouble",
       },
     },
   },
